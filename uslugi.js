@@ -9,20 +9,25 @@
 // Массив объектов с категориями
 const translations = {
   en: {
-    obj: [
-      { category: "Styling", name: "Curling iron", duration: "60", price1: "4000", price2: "10000" },
-      { category: "Styling", name: "Evening hairstyle", duration: "25", price1: "10000", price2: "15000" },
-      { category: "Styling", name: "Wedding hairstyle", duration: "20", price1: "15000", price2: "25000" },
-      { category: "Styling", name: "Keratin straightening", duration: "15", price1: "20000", price2: "50000" },
-      { category: "Haircut", name: "Haircut", duration: "35", price1: "2000", price2: "4000" },
-      { category: "Haircut", name: "Blow dry", duration: "45", price1: "2000", price2: "5000" },
-      { category: "Haircut", name: "Mixed blow dry", duration: "45", price1: "3000", price2: "6000" },
-      { category: "Coloring", name: "Bleaching and coloring", duration: "15", price1: "10000", price2: "15000" },
-      { category: "Coloring", name: "Highlighting (balayage, shatush)", duration: "15", price1: "15000", price2: "50000" },
-      { category: "Coloring", name: "Hair coloring", duration: "15", price1: "5000", price2: "8000" }
-    ]
+    ukladka: "Styling",
+
+
+    obj: [{ category: "Styling", name: "Curling iron", duration: "60", price1: "4000", price2: "10000" },
+    { category: "Styling", name: "Evening hairstyle", duration: "25", price1: "10000", price2: "15000" },
+    { category: "Styling", name: "Wedding hairstyle", duration: "20", price1: "15000", price2: "25000" },
+    { category: "Styling", name: "Keratin straightening", duration: "15", price1: "20000", price2: "50000" },
+    { category: "Haircut", name: "Haircut", duration: "35", price1: "2000", price2: "4000" },
+    { category: "Haircut", name: "Blow dry", duration: "45", price1: "2000", price2: "5000" },
+    { category: "Haircut", name: "Mixed blow dry", duration: "45", price1: "3000", price2: "6000" },
+    { category: "Coloring", name: "Bleaching and coloring", duration: "15", price1: "10000", price2: "15000" },
+    { category: "Coloring", name: "Highlighting (balayage, shatush)", duration: "15", price1: "15000", price2: "50000" },
+    { category: "Coloring", name: "Hair coloring", duration: "15", price1: "5000", price2: "8000" }
+    ],
   },
+
   am: {
+    ukladka: "ոճավորում",
+
     obj: [
       { category: "Ուրձգնում", name: "Մազել ոլորող", duration: "60", price1: "4000", price2: "10000" },
       { category: "Ուրձգնում", name: "Երեկոյան սանրվածք", duration: "25", price1: "10000", price2: "15000" },
@@ -34,9 +39,11 @@ const translations = {
       { category: "Ներկում", name: "Մազերի բացում և ներկում", duration: "15", price1: "10000", price2: "15000" },
       { category: "Ներկում", name: "Լուսավորող տեխնիկաներ", duration: "15", price1: "15000", price2: "50000" },
       { category: "Ներկում", name: "Մազերի ներկում", duration: "15", price1: "5000", price2: "8000" }
-    ]
+    ],
   },
+
   ru: {
+    ukladka: "Укладка",
     obj: [
       { category: "Укладка", name: "Щипци", duration: "60", price1: "4000", price2: "10000" },
       { category: "Укладка", name: "Вечерняя прическа", duration: "25", price1: "10000", price2: "15000" },
@@ -57,6 +64,9 @@ const languagesSelect = document.getElementById("languagesSelect");
 const container = document.querySelector(".bottom");
 const search = document.getElementById("search");
 
+
+
+
 languagesSelect.addEventListener("change", function () {
   translation();
   localStorage.setItem("language", languagesSelect.value);
@@ -73,6 +83,8 @@ function translation() {
 
   render(translations[language].obj);
 }
+
+
 
 window.addEventListener("load", function () {
   const activeLanguage = localStorage.getItem("language") || "en";
@@ -103,7 +115,6 @@ function render(items) {
       const divItem = document.createElement("div");
       const itemName = item.name.charAt(0).toUpperCase() + item.name.slice(1);
       divItem.className = "items";
-
       divItem.innerHTML = `
         <h3 class="name">${itemName}</h3>
         <span class="duration">${item.duration}min</span>
@@ -111,6 +122,8 @@ function render(items) {
       `;
 
       divItems2.appendChild(divItem);
+      console.log(item);
+
     });
 
     container.appendChild(divItems2);
