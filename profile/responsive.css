@@ -1,0 +1,79 @@
+@media (max-width:950px) {
+    .container {
+        height: 150vh;
+    }
+
+    .profile {
+        width: 100%;
+
+    }
+
+    .profile_btn {
+        margin-top: 50px;
+    }
+
+    .map_bg {
+        height: 200px;
+    }
+}
+
+@media (max-width:900px) {
+    .address2 {
+        font-size: 18px;
+        width: 39%;
+    }
+}
+
+@media(max-width:750px) {
+    .address2 {
+        font-size: 16px;
+        font-weight: bolder;
+        width: 38%;
+
+    }
+}
+
+@media(max-width:535px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .time {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #copyText {
+        margin-top: 30px;
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .address2>ion-icon {
+        font-size: 16px;
+
+    }
+}
+
+@media(max-width:450px) {
+    .title {
+        font-size: 23px;
+    }
+
+    .time {
+        font-size: 12px;
+        width: 86%;
+    }
+}
+
+@media(max-width:420px) {
+    .time {
+        font-weight: bolder;
+        flex-wrap: wrap;
+
+        ion-icon {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+}

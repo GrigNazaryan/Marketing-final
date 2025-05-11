@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="profile.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile">
+            <a href="../index.html" class="link2">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+            <div class="logo"></div>
+            <div class="box1">
+                <h2 class="title">Beauty Bar</h2>
+                <div class="address_box">
+                    <a class="address link" href="#item">
+                        <ion-icon name="location-outline"></ion-icon>
+                        <span>Arno Babajanyan 153/1</span>
+                    </a>
+                    <a class="time2 link" href="#item">
+                        <ion-icon name="alarm-outline"></ion-icon>
+                        <span>09:00-21:00</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="box2">
+                <h2 class="contact">
+                    Контакты
+                </h2>
+                <div class="address_box">
+                    <a class="address link" href="">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <span>+374 98 27-04-91</span>
+                    </a>
+                    <a class="time link" href="www.instagram.com/beautybar_4you?igsh=am15b21pbGozNHZ5">
+                        <ion-icon name="globe-outline"></ion-icon>
+                        <span>www.instagram.com/beautybar_4you?igsh=am15b21pbGozNHZ5</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="location">
+                <h2>Расположение</h2>
+                <a class="address2 link" href="#item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <span id="copyText" onclick="copyToClipboard()">Arno Babajanyan 153/1</span>
+                    <div id="copyTooltip">✅ Скопировано!</div>
+                </a>
+                <div class="map_bg">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.1826356945466!2d44.4383823!3d40.1681105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abddf911d682f%3A0x57a753a551ff19d9!2s153%2C%201%20Arno%20Babajanyan%20St%2C%20Yerevan!5e0!3m2!1sen!2sam!4v1714901902953!5m2!1sen!2sam"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
